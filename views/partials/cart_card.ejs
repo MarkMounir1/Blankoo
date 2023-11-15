@@ -1,0 +1,30 @@
+
+<tr>
+    
+    <td data-th="Product">
+        <div class="row">
+            <div class="col-md-3 text-left">
+                <a href="/user/product/<%= product.item._id %>">
+                    <img src="<%= product.item.Image %>" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+                </a>
+       
+            </div>
+            <div class="col-md-9 text-left mt-sm-2">
+                <h4><%= product.item.pname %></h4>
+                <p class="font-weight-light"></p>
+            </div>
+        </div>
+    </td>
+    <td data-th="Price"><%= product.item.Price %> EGP</td>
+    <td data-th="Quantity">
+        <input type="number" class="form-control form-control-lg text-center" value="<%= product.qty %>"  readonly >
+    </td>
+    <td class="actions" data-th="">
+        <div class="text-right">
+          <div class="text-right">
+              <button class="btn btn-white border-secondary bg-white btn-md mb-2">
+                 <a href="/user/reduce/<%= product.item._id %>"><i class="bi-trash-fill"  ></i></a> 
+              </button>
+        </div>
+    </td>
+</tr>
